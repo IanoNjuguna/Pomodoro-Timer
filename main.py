@@ -1,5 +1,6 @@
 #!/bin/python3
 import time
+import os
 from tkinter import *
 from tkinter import messagebox
 
@@ -54,6 +55,7 @@ def runTimer():
 
 # Inform user time has elapsed
         if (clockTime) == 0:
+            os.system('spd-say "Time is up!"')
             messagebox.showinfo("", "Your time has elapsed")
 
         clockTime -= 1
